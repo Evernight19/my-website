@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart & Checkout</title>
+
+    <!-- Both CSS files can be loaded -->
+    <link rel="stylesheet" href="css/HorizonOfExistence.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search Products...">
+        <button id="searchBtn">Search</button>
+    </div>
+</nav>
+
+<!-- SIDE MENU -->
+<div id="sideMenu" class="side-menu">
+    <button class="close-btn" id="closeMenu">✖</button>
+
+    <button type="submit" onclick="window.location.href='index.html'">Home</button>
+    <button type="submit" onclick="window.location.href=''">About</button>
+    <button type="submit" onclick="window.location.href=''">Contact</button>
+
+    <button type="submit" onclick="window.location.href='HorizonOfExistence.html'">
+        Cart <img id="cart-image" src="img/cart.png" alt="cart">
+    </button>
+
+    <button type="submit" onclick="window.location.href='products.html'">Products</button>
+    <button type="submit" onclick="window.location.href='survey.html'">Feedback</button>
+</div>
+
+<!-- CART SECTION -->
+<div id="view-cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+
+    <h3>Total: €<span id="cart-total">0.00</span></h3>
+
+    <button type="submit" id="btn1" class="option1" onclick="showCheckout()">
+        Checkout Securely
+    </button>
+</div>
+
+<!-- CHECKOUT SECTION -->
+<div id="checkout-section" class="hidden">
+
+    <div class="payment-container">
+        <h1>Payment Details</h1>
+
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <p>Items Total: €<span id="checkoutTotal">0.00</span></p>
+            <p>Tax: €<span id="checkoutTax">0.00</span></p>
+            <h3>Total: €<span id="checkoutFinal">0.00</span></h3>
+        </div>
+    </div>
+
+    <form id="paymentForm">
+        <div class="center-wrapper">
+
+            <label>Cardholder Name</label>
+            <input type="text" id="cardName" required>
+
+            <label>Card Number</label>
+            <input type="text" id="cardNumber" maxlength="19" placeholder="1234 5678 9012 3456" required>
+
+            <div class="row">
+                <div>
+                    <label id="expiry-label">Expiry</label>
+                    <input type="text" id="expiry" maxlength="5" placeholder="MM/YY" required>
+                </div>
+
+                <div>
+                    <label id="cvv-label">CVV</label>
+                    <input type="password" id="cvv" maxlength="3" required>
+                </div>
+            </div>
+
+            <button type="submit" id="payBtn">Pay Now</button>
+        </div>
+    </form>
+
+    <div id="processing" class="hidden">
+        <div class="loader"></div>
+        <p>Processing Payment...</p>
+    </div>
+
+    <div id="success" class="hidden">
+        <h2>Payment Successful</h2>
+        <p>Your order ID is: <span id="orderId"></span></p>
+    </div>
+</div>
+
+<!-- JS FILES -->
+<script src="js/Horizon.js"></script>
+<script src="js/checkout.js"></script>
+
+<script>
+function showCheckout() {
+    document.getElementById("view-cart").style.display = "none";
+    document.getElementById("checkout-section").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>

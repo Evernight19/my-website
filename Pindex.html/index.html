@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IX Store</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+<!-- Video Introduction -->
+  
+<div class="video-intro">
+  <video autoplay muted playsinline id="introVideo">
+    <source src="vid/black-hole.mp4" type="video/mp4" />
+    </video>
+</div>
+
+<div class="main-content">
+
+
+
+<!-- NavBar -->
+<nav class="navbar">
+    <div class="menu-toggle" id="menuToggle">
+        ☰
+    </div>
+
+
+<!-- SearchBar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search Products...">
+        <button id="searchBtn">Search</button>
+    </div>
+</nav>
+
+
+<!-- Side Menu -->
+<div id="sideMenu" class="side-menu">
+    <button class="close-btn" id="closeMenu">✖</button>
+
+    <button type="submit" id="home-button" onclick="window.location.href='index.html'">Home</button>
+    <button type="submit" id="about-button" onclick="window.location.href=''">About</button>
+    <button type="submit" id="contact-button" onclick="window.location.href=''">Contact</button>
+    <button type="submit" id="cart-button" onclick="window.location.href='HorizonOfExistence.html'">
+        Cart <img id="cart-image" src="img/cart.png" alt="cart">
+    </button>
+    <button type="submit" id="product-button" onclick="window.location.href='products.html'">Honkai Products</button>
+    <button type="submit" id="merchandise-button" onclick="window.location.href='Merchandise.html'">Honkai Merch</button>
+    <button type="submit" id="survey-button" onclick="window.location.href='survey.html'">Feedback</button>
+    <button type="submit" id="private-button" onclick="window.location.href='secure.html'">Private</button>
+</div>
+
+
+<!-- SearchBar Script -->
+  <script>
+    document.getElementById("searchBtn").addEventListener("click", () => {
+      const query = document.getElementById("searchInput").value.trim();
+      if (query !== "") {
+        console.log("Searching for:", query);
+      }
+    })
+
+    document.getElementById("searchInput").addEventListener("keydown", (e) => {
+      if (e.key == "Enter") {
+        document.getElementById("searchBtn").click();
+
+
+      }
+    })
+  </script>
+
+
+<!-- BlackHole Video Inline & Home Text -->
+<div class="BlackHole2">
+  <div class="video-target"></div>
+  <video id="loopVideo" src="vid/black-hole.mp4" autoplay muted loop></video>
+  
+    <div class="Home-text">
+      <h2>My Shop</h2>
+      <p>
+        In this place, the universe speaks in whispers of decay. We follow the path of Nihility, not in fear,
+        but in understanding - embracing impermanence, cosmic stillness and the quiet beauty of the void. Every piece reflects
+        the elegance of dissolution, the serenity found in entropy and the truth that all things drift toward nothingness.
+      </p>
+    </div>
+</div>
+
+
+<!-- Page Direct -->
+  <div class="product-options">
+    <h2>Product Categories:</h2>
+
+    <button type="submit" id="honkai-products" onclick="window.location.href='products.html'"><img src="img/IX.jpg" alt="second-product"><p id="line">________________</p><p1>Honkai: Star Rail</p1></button>
+
+    <button type="submit" id="honkai-merchandise" onclick="window.location.href='Merchandise.html'"><img src="img/AcheronMerch.jpg" alt="merch-products"><p id="line">________________</p><p1>Honkai: Star Rail Merch</p1></button>
+
+  </div>
+
+
+<!-- Testimonials -->
+<section class="testimonials">
+  <div class="testimonial">
+        <h4>★★★★★</h4>
+        <p>
+          <strong>Zephyro:</strong> "I didn't expect merchandise to feel this immersive. The designs echo the Path of Nihility perfectly — calm, cosmic, and haunting in the best way."
+        </p>
+      </div>
+
+
+      <div class="testimonial">
+        <h4>★★★★★</h4>
+        <p>
+          <strong>Dahlia:</strong> "There’s a stillness to these products that stays with you. It’s rare to find art that embraces impermanence so gracefully."
+        </p>
+      </div>
+</section>
+
+
+<!-- Footer -->
+<footer>© IX Store</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/script.js"></script>
+</body>
+
+
+</html>

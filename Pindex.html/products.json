@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "name": "Acheron E6",
+        "keywords": ["e6", "acheron e6", "limited", "emanator", "queen", "best", "nihility", "dps"],
+        "page": "Naught.html"
+    },
+    {
+        "id": 2,
+        "name": "Acheron",
+        "keywords": ["acheron", "regular", "emanator", "queen", "best", "nihility", "dps"],
+        "page": "RegAchy.html"
+    },
+    {
+        "id": 3,
+        "name": "Acheron Lightcone",
+        "keywords": ["acheron", "lightcone", "acheron lightcone", "along the passing shore", "nihility"],
+        "page": "AchyLight.html"
+    },
+    {
+        "id": 4,
+        "name": "Kafka",
+        "keywords": ["kafka", "regular", "stellaron hunter", "dot", "nihility", "mommy", "dommy mommy"],
+        "page": "Kafka.html"
+    },
+    {
+        "id": 5,
+        "name": "Kafka E6",
+        "keywords": ["e6", "kafka e6", "limited", "kafka", "regular", "stellaron hunter", "dot", "nihility", "mommy", "dommy mommy"],
+        "page": "KafkaE6.html"
+    },
+    {
+        "id": 6,
+        "name": "Kafka Lightcone",
+        "keywords": ["kafka", "lightcone", "kafka lightcone", "patience is all you need", "nihility", "dot", "mommy lightcone"],
+        "page": "Kafkalight.html"
+    },
+    {
+        "id": 7,
+        "name": "Acheron Figure",
+        "keywords": ["figure", "acheron", "best", "nihility", "limited", "emanator", "queen"]
+    }
+
+
+]
