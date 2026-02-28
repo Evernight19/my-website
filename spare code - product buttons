@@ -1,6 +1,0 @@
-const productData = {
-    id: 6,
-    name: "Kafka Lightcone",
-    price: 99.99,
-    image: "img/KafkaLight.jpg"
-};
