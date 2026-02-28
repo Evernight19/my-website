@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IX Store</title>
+    <link rel="stylesheet" href="css/Kafka.css">
+</head>
+
+
+<body>
+
+<!-- NavBar -->
+<nav class="navbar">
+    <div class="menu-toggle" id="menuToggle">
+        ☰
+    </div>
+
+
+<!-- SearchBar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search Products...">
+        <button id="searchBtn">Search</button>
+    </div>
+</nav>
+
+
+<!-- Side Menu -->
+<div id="sideMenu" class="side-menu">
+    <button class="close-btn" id="closeMenu">✖</button>
+
+    <button type="submit" id="home-button" onclick="window.location.href='index.html'">Home</button>
+    <button type="submit" id="about-button" onclick="window.location.href=''">About</button>
+    <button type="submit" id="contact-button" onclick="window.location.href=''">Contact</button>
+    <button type="submit" id="cart-button" onclick="window.location.href='HorizonOfExistence.html'">
+        Cart <img id="cart-image" src="img/cart.png" alt="cart">
+    </button>
+    <button type="submit" id="product-button" onclick="window.location.href='products.html'">Products</button>
+    <button type="submit" id="survey-button" onclick="window.location.href='survey.html'">Feedback</button>
+    <button type="submit" id="private-button" onclick="window.location.href='secure.html'">Private</button>
+</div>
+
+
+<!-- Product Image & Pay Button Container -->
+<div class="page-container">
+
+
+    <div class="product-image">
+        <img src="img/KafkaSplash.jpg" alt="RegAchy">
+    </div>
+
+
+    <div class="option1">
+
+        <div class="price">€99<span>.99</span></div>
+
+        <div class="delivery">
+            FREE delivery <strong>-----</strong><br>
+            on orders over €200.
+        </div>
+
+        <div class="location">Deliver to -----</div>
+
+        <div class="stock">In Stock</div>
+
+
+        <div class="quantity-box">
+            <button id="decreaseQty">−</button>
+            <span id="quantityDisplay">1</span>
+            <button id="increaseQty">+</button>
+        </div>
+
+
+        <button id="btn1" onclick="openPopup()">Add to basket</button>
+        <button class="buy-now">Buy Now</button>
+
+        <div class="info">
+            <div><span>Dispatches from</span><strong>IX</strong></div>
+            <div><span>Sold by</span><strong>Josh</strong></div>
+            <div><span>Payment</span><strong>Secure transaction</strong></div>
+        </div>
+
+        <hr>
+
+        <button class="add-list">Add to List</button>
+
+    </div>
+
+</div>
+
+
+<!-- Cart Confirm Popup -->
+<div class="popup" id="popup">
+    <img src="img/KafkaSplash.jpg" alt="Cart Item" width="50">
+    <p>Item has been added to Cart</p>
+</div>
+
+
+<!-- SearchBar Script -->
+  <script>
+    document.getElementById("searchBtn").addEventListener("click", () => {
+      const query = document.getElementById("searchInput").value.trim();
+      if (query !== "") {
+        console.log("Searching for:", query);
+      }
+    })
+
+    document.getElementById("searchInput").addEventListener("keydown", (e) => {
+      if (e.key == "Enter") {
+        document.getElementById("searchBtn").click();
+      }
+    })
+  </script>
+  
+
+<!-- Popup Script -->
+  <script>
+    function openPopup() {
+      addToCart(productData);
+
+      const popup = document.getElementById("popup");
+
+      popup.classList.add("show");
+
+      setTimeout(() => {
+        popup.classList.remove("show");
+      }, 2000);
+    }
+  </script>
+  
+
+
+
+
+
+
+
+
+<script src="js/Kafka.js"></script>
+
+
+</body>
+</html>

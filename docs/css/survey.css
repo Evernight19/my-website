@@ -1,0 +1,325 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, rgb(61, 66, 70), rgb(28, 28, 28), black);
+  min-height: 100vh;
+}
+
+body {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(to top, rgb(61, 66, 70), rgb(28, 28, 28), rgb(14, 14, 14));
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-toggle {
+  display: block;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+  margin-left: 0px;
+  opacity: 0.5;
+}
+
+.menu-toggle:hover {
+  opacity: 0.2;
+}
+
+
+
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  background: linear-gradient(black, rgb(28,28,28), rgb(61,66,70));
+  box-shadow: 3px 0 10px rgba(0,0,0,0.5);
+  padding: 60px 15px 0 15px;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  transform: translateX(-100%);
+  opacity: 0;
+
+
+  visibility: hidden;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease,
+    visibility 0s linear 0.35s; 
+  pointer-events: none;
+}
+
+.side-menu.open {
+  transform: translateX(0);
+  opacity: 1;
+
+  visibility: visible;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease,
+    visibility 0s; 
+  pointer-events: auto;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  opacity: 0.2;
+}
+
+
+.side-menu button {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  transition: background 0.2s, padding-left 0.2s;
+}
+
+.side-menu button:hover {
+  background: rgba(255,255,255,0.08);
+  padding-left: 18px;
+  opacity: 0.2;
+}
+
+
+#cart-image {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+
+
+
+
+
+
+.search-container {
+  display: flex;
+  width: 600px;
+  background: none;
+  border-radius: 50px;
+  padding: 6px 12px;
+  box-shadow: none;
+  position: relative;
+  margin-left: 10px;
+  opacity: 0.5;
+}
+
+.search-container input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 10px;
+  background-color: white;
+  color: grey;
+  opacity: 0.5;
+  border-radius: 10px;
+}
+
+.search-container input:hover {
+  background: black;
+  opacity: 0.5;
+}
+
+.search-container button {
+  opacity: 0.5;
+  background: white;
+  color: black;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.search-container button:hover {
+  background: black;
+  opacity: 0.2;
+  color: grey;
+}
+
+
+
+
+
+
+
+
+.survey-form {
+    width: 35%;
+    margin: 40px auto;
+    padding: 25px;
+    background: #1e1e1e;
+    border-radius: 12px;
+    color: white;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 18px rgba(0,0,0,0.45);
+    border: 1px solid #333;
+}
+
+
+.survey-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+
+.survey-form input[type="text"],
+.survey-form input[type="email"],
+.survey-form input[type="number"],
+.survey-form input[type="date"],
+.survey-form select,
+.survey-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background: #2b2b2b;
+    color: white;
+    margin-bottom: 18px;
+    font-size: 14px;
+    transition: border 0.2s ease, background 0.2s ease;
+}
+
+.survey-form input:focus,
+.survey-form select:focus,
+.survey-form textarea:focus {
+    border-color: #6a5acd;
+    background: #323232;
+    outline: none;
+}
+
+
+.survey-form input[type="radio"],
+.survey-form input[type="checkbox"] {
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+
+.form-rating {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.form-rating label {
+    cursor: pointer;
+    font-size: 22px;
+    color: white;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.form-rating input[type="radio"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.form-rating label:hover {
+    transform: scale(1.08);
+    opacity: 0.6;
+}
+
+
+.survey-form textarea {
+    resize: vertical;
+}
+
+
+.survey-form button {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+
+.survey-form button {
+    width: 100%;
+    padding: 14px;
+    background: grey;;
+    opacity: 0.7;
+}
+
+.survey-form button:hover {
+    opacity: 0.2;
+    cursor: pointer;    
+    transform: scale(1.02);
+}
+
+
+
+
+#thankYouMessage {
+  display: none; 
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.6s ease-out forwards;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 20px;
+  color: grey;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

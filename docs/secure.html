@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private</title>
+    <link rel="stylesheet" href="css/secure.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<!-- Login  -->
+    <div id="login">
+        <h2>Enter Password</h2>
+        <input type="password" id="pw">
+        <button onclick="check()">Submit</button>
+    </div>
+
+<!-- Display Pre-Login -->
+    <div id="content" style="display:none;">
+
+
+<!-- Main Content -->
+<main>
+
+
+
+<!-- NavBar -->
+    <nav class="navbar">
+    <div class="menu-toggle" id="menuToggle">
+        ☰
+    </div>
+
+
+<!-- SearchBar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search Products...">
+        <button id="searchBtn">Search</button>
+    </div>
+    </nav>
+
+
+<!-- Side Menu -->
+    <div id="sideMenu" class="side-menu">
+    <button class="close-btn" id="closeMenu">✖</button>
+
+    <button type="submit" id="home-button" onclick="window.location.href='index.html'">Home</button>
+    <button type="submit" id="about-button" onclick="window.location.href=''">About</button>
+    <button type="submit" id="contact-button" onclick="window.location.href=''">Contact</button>
+    <button type="submit" id="cart-button" onclick="window.location.href='HorizonOfExistence.html'">
+        Cart <img id="cart-image" src="img/cart.png" alt="cart">
+    </button>
+    <button type="submit" id="product-button" onclick="window.location.href='products.html'">Products</button>
+    <button type="submit" id="survey-button" onclick="window.location.href='survey.html'">Feedback</button>
+    </div>
+
+
+<!-- Header 1 -->
+        <h1>Private Info</h1>  
+        
+
+<!-- Header 2 -->
+        <h1>Products</h1>
+
+
+<!-- Product Table -->
+    <table id="productsTable">
+        <thead>
+            <tr>
+                <th>Product_ID</th>
+                <th>Product_Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>In_Stock</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+
+</main>
+
+
+    </div>
+
+
+<!-- Login Script -->
+    <script>
+        function check() {
+            const password = "Naught";
+            const input = document.getElementById("pw").value;
+
+            if (input === password) {
+                document.getElementById("login").style.display = "none";
+                document.getElementById("content").style.display = "block";
+            } else {
+                alert("Incorrect Password");
+            }
+        }
+    </script>
+
+
+
+
+
+
+<script defer src="js/secure.js"></script>
+
+</body>
+</html>
